@@ -1393,7 +1393,7 @@ void   strong_number(int n)
 
 
 
-// write a function for decimal number to binary number conversion
+// wap for decimal number to binary number conversion
 #include<stdio.h>
 int main()
 {
@@ -1403,12 +1403,33 @@ int main()
     int j;
     int a[32];
     scanf("%d",&n);
-   // int num=n;
     while(n!=0)
     {
         a[i]=n%2;
         ++i;
         n=n/2;
+    }
+    for(j=i-1;j>=0;j--)
+        printf("%d",a[j]);
+}
+
+// wap for decimal number to octal  number conversion
+
+#include<stdio.h>
+int main()
+{
+    printf("enter the number decimal number to convert into octal number ");
+    int n;
+    int i=0;
+    int j;
+    int a[32];
+    scanf("%d",&n);
+   // int num=n;
+    while(n!=0)
+    {
+        a[i]=n%8;
+        ++i;
+        n=n/8;
     }
     // print the array element in reverse order
     for(j=i-1;j>=0;j--)
@@ -1417,6 +1438,131 @@ int main()
     }
     
 }
+
+// write a program for decimal number to hexadecimal number conversion
+#include<stdio.h>
+int main()
+{
+    printf("enter the number decimal number to hexadecimal  number ");
+    int n;
+    int i=0;
+    int j;
+    int a[32];
+    scanf("%d",&n);
+   // int num=n;
+    while(n!=0)
+    {
+        a[i]=n%16;
+        ++i;
+        n=n/16;
+    }
+    // print the array element in reverse order
+    for(j=i-1;j>=0;j--)
+    {
+        printf("%d",a[j]);
+    }
+    
+}
+// // write a function for the conver the decimal to binary number
+#include<stdio.h>
+void  decimal_to_binary(int x );// forward declaraion 
+int main()
+{
+    printf("enter the number decimal number to convert into Binary number ");
+    int n;
+    scanf("%d",&n);
+    printf("decimal to binary conversion of %d is :\n",n );
+    decimal_to_binary(n);
+  
+}
+void  decimal_to_binary(int x)
+{
+   
+    int i=0;
+    int j;
+    int a[32];
+    while(x!=0)
+    {
+        a[i]=x%2;
+        ++i;
+        x=x/2;
+    }
+    // print the array element in reverse order
+    for(j=i-1;j>=0;j--)
+    {
+        printf("%d",a[j]);
+    }
+   
+}
+
+// write a function for the conver the decimal to octal number
+#include<stdio.h>
+void  decimal_to_octal(int x );// forward declaraion
+int main()
+{
+    printf("enter the number decimal number to convert into octal number ");
+    int n;
+    scanf("%d",&n);
+    printf("decimal to octal conversion of %d is :\n",n );
+    decimal_to_octal(n);
+   
+}
+void decimal_to_octal(int x)
+{
+    int i=0;
+    int j;
+    int a[32];
+    scanf("%d",&x);
+   // int num=n;
+    while(x!=0)
+    {
+        a[i]=x%8;
+        ++i;
+        x=x/8;
+    }
+    // print the array element in reverse order
+    for(j=i-1;j>=0;j--)
+    {
+        printf("%d",a[j]);
+    }
+}
+
+// 
+// write a function for the conver the decimal to hexadecimal number
+#include<stdio.h>
+void decimal_to_hexadecimal(int x );// forward declaraion
+int main()
+{
+    printf("enter the number decimal number to hexadecimal  number ");
+    int n;
+    scanf("%d",&n);
+    printf("decimal to hexadecimal conversion of %d is :\n",n );
+    decimal_to_hexadecimal(n);
+    
+    
+}
+void decimal_to_hexadecimal(int x)
+{
+   
+    int i=0;
+    int j;
+    int a[32];
+    while(x!=0)
+    {
+        a[i]=x%16;
+        ++i;
+        x=x/16;
+    }
+    // print the array element in reverse order
+    for(j=i-1;j>=0;j--)
+    {
+        printf("%d",a[j]);
+    }
+}
+
+// solving programs using recursion 
+
+
 
 
 
