@@ -1562,6 +1562,32 @@ void decimal_to_hexadecimal(int x)
 
 // solving programs using recursion 
 
+// tower of hanoi problem using recursion 2 april 
+
+#include<stdio.h>
+void toh(int n,char source,char destination ,char auxiliary)
+{
+    if(n==1)
+    {
+        printf("%c -->%c",source,destination);
+        return;
+    }
+    else
+    {
+        toh(n-1,source,auxiliary,destination);
+        printf("\n%c -->%c\n",source,destination);
+        toh(n-1,auxiliary,destination,source);
+    }
+}
+int main()
+{
+    int n;
+    printf("enter the number of disk : ");
+    scanf("%d",&n);
+    toh(n,'A','B','C');
+}
+    
+
 
 
 
