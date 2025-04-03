@@ -1586,7 +1586,55 @@ int main()
     scanf("%d",&n);
     toh(n,'A','B','C');
 }
+// easy problems on recursion 
+
+// recursion easy problem solving daily two problems 
+// 4 april 
+// wap for the find the factorial of a number using recursion
+
+#include<stdio.h>
+int factorial(long long unsigned int n)
+{
+    // base condition for recursion 
+    if(n==0 || n==1) 
+    {
+        return 1;
+    }
+    else{
+        return (n*factorial(n-1));
+    }
+}
+int main()
+{
+    long long unsigned int n;
+    printf("enter the number to find the factorial : ");
+    scanf("%llu",&n);
+    printf("factorial of %llu is %llu",n,factorial(n));
+}
     
+
+// summation of n numbers using the recursion 
+#include<stdio.h>
+long long unsigned int summation(int n)
+{
+    // base condition for recursion
+    if(n==1 || n==0)
+    {
+        return n;
+    }
+    else{
+        return n+summation(n-1);
+    }
+}
+int main()
+{
+    long long unsigned int n;
+    printf("enter the number :  ");
+    scanf("%llu",&n);
+    printf("summation of %llu numbers is %llu",n,summation(n));
+}
+
+
 
 
 
